@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/main.css">	
+</head>
+<body>	
+	<div class="calculator">
+		<div class="calculator__left calculator__block">
+			<div class="calculator-raschet">
+				<div class="calculator-raschet__block">
+					<div class="calculator-section-vorota">
+						<div class="calculator__title">
+							Секционные ворота
+						</div>
+						<div>
+							<div class="calculator__block__checkbox">								
+								<input type="checkbox" class="calculator__checkbox" id="calculator__1">
+								<label for="calculator__1">Для отаплеваеых помещений стальные</label>
+							</div>
+							<div class="calculator__block__checkbox">
+								<input type="checkbox" class="calculator__checkbox" id="calculator__2">
+								<label for="calculator__2">Для отаплеваеых помещений алюминиевые LUX</label>
+							</div>
+							<div class="calculator__block__checkbox">
+								<input type="checkbox" class="calculator__checkbox" id="calculator__3">
+								<label for="calculator__3">Для отаплеваеых помещений</label>
+							</div>
+						</div>
+					</div>
+					<div class="calculator-razmer">
+						<div class="calculator__title">
+							Укажите размеры
+						</div>
+						<div>
+							<div class="calculator-razmer__block">
+								<label for="calculator__4">Ширина (мм)</label>
+								<input type="text" id="calculator__4">
+							</div>
+							<div class="calculator-razmer__block">
+								<label for="calculator__5">Высота (мм)</label>
+								<input type="text" id="calculator__5">
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="calculator-raschet__block">
+					<div class="calculator-complectation">
+						<div class="calculator__title">
+							Выберите комплектацию
+						</div>
+						<div class="calculator__block__checkbox__wrapper">
+							<div class="calculator__block__checkbox__wrapper--2">
+								<div class="calculator__block__checkbox">
+									<input type="checkbox" class="calculator__checkbox" id="calculator__6">
+									<label for="calculator__6">Калитка</label>
+								</div>
+								<div class="calculator__block__checkbox">
+									<input type="checkbox" class="calculator__checkbox" id="calculator__7">
+									<label for="calculator__7">Задвижка</label>
+								</div>
+							</div>
+							<div class="calculator__block__checkbox__wrapper--2">
+								<div class="calculator__block__checkbox">
+									<input type="checkbox" class="calculator__checkbox" id="calculator__8">
+									<label for="calculator__8">Замок</label>
+								</div>
+								<div class="calculator__block__checkbox">
+									<input type="checkbox" class="calculator__checkbox" id="calculator__9">
+									<label for="calculator__9">Автоматика</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="calculator-montazh">
+						<div class="calculator__title">
+							Монтаж
+						</div>
+						<div>
+							<div class="calculator__block__checkbox">
+								<input type="checkbox" class="calculator__checkbox" id="calculator__10">
+								<label for="calculator__10">Монтаж</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="calculator__title">
+						Выберите дизайн
+					</div>
+					<div class="calculator-raschet__block">
+						<div class="calculator-design">
+							<div>
+								Дизайн снаружи
+							</div>
+							<div class="design-slider" data-design-slider>
+								<div class="design-slider__item">
+									<img src="img/design1.png" alt="">
+								</div>
+								<div class="design-slider__item">
+									<img src="img/design2.png" alt="">
+								</div>
+								<div class="design-slider__item">
+									<img src="img/design3.png" alt="">
+								</div>
+								<div class="design-slider__item">
+									<img src="img/design4.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="calculator-color">
+							<div>
+								Цвет
+							</div>
+							<div class="calculator-color__list">
+								<div class="calculator-color__item">
+									<img src="img/color1.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color2.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color3.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color4.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color1.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color2.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color3.png" alt="">
+								</div>
+								<div class="calculator-color__item">
+									<img src="img/color4.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="calculator__right calculator__block calculator-result">
+			<div class="calculator-result__title">
+				По настоящему теплые ворота
+			</div>
+			<div class="calculator-result__img">
+				<img src="img/result.jpg" alt="">
+			</div>
+			<div class="calculator-result-price">
+				<div class="calculator-result-price__left">
+					<div class="calculator-result-price__total">
+						<span class="calculator-result-price__total__text">Итог: </span>
+						<span class="calculator-result-price__total__price">54 243 ₽</span>
+						<span class="calculator-result-price__total__star">*</span>
+					</div>
+					<div class="calculator-result-price__text">
+						* Стоимость без учета доставки <br>
+						и подготовки проема
+					</div>
+				</div>
+				<div class="calculator-result-price__right">
+					<button class="calculator__btn">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+			<div class="calculator__title">
+				Комплектацмя заказа
+			</div>
+			<div class="calculator-result__text">
+				Ворота гаражные секционые с пружинами растяжения (RSD01 BIW)
+			</div>
+			<div class="calculator-result-table">
+				<table>
+					<tr>
+						<td>
+							<span>
+								ширина:
+							</span>
+							<span class="calculator-result-table__value">
+								3000
+							</span>
+						</td>
+						<td>привод: <span class="calculator-result-table__value">нет</span></td>
+					</tr>
+				</table>
+			</div>
+			<a href="#" class="calculator-print">
+				<img src="" alt="">
+			</a>
+		</div>
+	</div>
+	<script src="assets/main.js" type="text/javascript"></script>
+</body>
+</html>
