@@ -46,7 +46,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="calculator-raschet__block">
+				<div class="calculator-raschet__block calculator-raschet__block--border">
 					<div class="calculator-complectation">
 						<div class="calculator__title">
 							Выберите комплектацию
@@ -86,62 +86,100 @@
 						</div>
 					</div>
 				</div>
-				<div>
-					<div class="calculator__title">
+				<div class="calculator-raschet__block calculator-raschet__design">
+					<div class="calculator__title calculator-raschet__title">
 						Выберите дизайн
-					</div>
-					<div class="calculator-raschet__block">
+					</div>					
 						<div class="calculator-design">
-							<div>
+							<div class="calculator-design__title">
 								Дизайн снаружи
 							</div>
-							<div class="design-slider" data-design-slider>
-								<div class="design-slider__item">
-									<img src="img/design1.png" alt="">
+							<div class="design-slider__wrapper">
+								<div class="design-slider__controll">
+									<div class="design-slider__controll__prev"></div>
+									<div class="design-slider__controll__next"></div>
 								</div>
-								<div class="design-slider__item">
-									<img src="img/design2.png" alt="">
-								</div>
-								<div class="design-slider__item">
-									<img src="img/design3.png" alt="">
-								</div>
-								<div class="design-slider__item">
-									<img src="img/design4.png" alt="">
+								<div class="design-slider" data-design-slider>
+									<div class="design-slider__item active">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design1.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design2.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design3.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design4.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item active">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design1.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design2.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design3.png" alt="">
+										</span>
+									</div>
+									<div class="design-slider__item">
+										<span class="design-slider__item__img">
+											<img src="assets/img/design4.png" alt="">
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="calculator-color">
-							<div>
+							<div class="calculator-color__title">
 								Цвет
 							</div>
-							<div class="calculator-color__list">
-								<div class="calculator-color__item">
-									<img src="img/color1.png" alt="">
+							<div class="calculator-color__wrapper">
+								<div class="calculator-color__controll">
+									<div class="calculator-color__controll__prev"></div>
+									<div class="calculator-color__controll__next"></div>
 								</div>
-								<div class="calculator-color__item">
-									<img src="img/color2.png" alt="">
-								</div>
-								<div class="calculator-color__item">
-									<img src="img/color3.png" alt="">
-								</div>
-								<div class="calculator-color__item">
-									<img src="img/color4.png" alt="">
-								</div>
-								<div class="calculator-color__item">
-									<img src="img/color1.png" alt="">
-								</div>
-								<div class="calculator-color__item">
-									<img src="img/color2.png" alt="">
-								</div>
-								<div class="calculator-color__item">
-									<img src="img/color3.png" alt="">
-								</div>
-								<div class="calculator-color__item">
-									<img src="img/color4.png" alt="">
+								<div class="calculator-color__list" data-color-slider>
+									<div class="calculator-color__item active">
+										<img src="assets/img/color1.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color2.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color3.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color4.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color1.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color2.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color3.png" alt="">
+									</div>
+									<div class="calculator-color__item">
+										<img src="assets/img/color4.png" alt="">
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						</div>					
 				</div>
 			</div>
 		</div>
@@ -150,7 +188,7 @@
 				По настоящему теплые ворота
 			</div>
 			<div class="calculator-result__img">
-				<img src="img/result.jpg" alt="">
+				<img src="assets/img/result.jpg" alt="">
 			</div>
 			<div class="calculator-result-price">
 				<div class="calculator-result-price__left">
@@ -180,19 +218,84 @@
 				<table>
 					<tr>
 						<td>
-							<span>
+							<span class="calculator-result-table__name">
 								ширина:
 							</span>
 							<span class="calculator-result-table__value">
 								3000
 							</span>
 						</td>
-						<td>привод: <span class="calculator-result-table__value">нет</span></td>
+						<td>
+							<span class="calculator-result-table__name">
+								привод:
+							</span>
+							<span class="calculator-result-table__value">нет</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="calculator-result-table__name">
+								высота:
+							</span>
+							<span class="calculator-result-table__value">
+								2500
+							</span>
+						</td>
+						<td>
+							<span class="calculator-result-table__name">
+								монтаж:
+							</span>
+							<span class="calculator-result-table__value">Да</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="calculator-result-table__name">
+								калитка:
+							</span>
+							<span class="calculator-result-table__value">
+								Нет
+							</span>
+						</td>
+						<td>
+							<span class="calculator-result-table__name">
+								панель: 
+							</span>
+							<span class="calculator-result-table__value">Доска</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="calculator-result-table__name">
+								задвижка:
+							</span>
+							<span class="calculator-result-table__value">
+								Да
+							</span>
+						</td>
+						<td>
+							<span class="calculator-result-table__name">Цвет: </span>
+							<span class="calculator-result-table__value">RAL 6005 (зелёный)</span></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="calculator-result-table__name">
+								замок:
+							</span>
+							<span class="calculator-result-table__value">
+								Нет
+							</span>
+						</td>
+						<td>
+							<span class="calculator-result-table__name">
+								
+							</span>
+							<span class="calculator-result-table__value">
+								<img src="assets/img/color-result.png" alt="">
+							</span>
+						</td>
 					</tr>
 				</table>
 			</div>
 			<a href="#" class="calculator-print">
-				<img src="" alt="">
+				<img src="assets/img/print-icon.png" alt="">
 			</a>
 		</div>
 	</div>

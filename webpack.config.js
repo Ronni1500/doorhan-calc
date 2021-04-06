@@ -118,7 +118,14 @@ module.exports = {
 	        	generator: {
 		        	filename: 'fonts/[name][ext]'
 		       	}
-	      	},
+			},
+			{
+	        	test: /\.(png|jpg|svg|gif)$$/,
+	        	type: 'asset/resource',
+	        	generator: {
+		        	filename: 'img/[name][ext]'
+		       	}
+	      	},  
 		]
 	}
 }

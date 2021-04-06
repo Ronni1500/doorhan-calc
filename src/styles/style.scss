@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 .calculator {
 	font-family: Gotham Pro, sans-serif;
 	margin: 0 auto;
@@ -11,12 +15,7 @@
 
 	@media (min-width: 1100px) {
 		width: 1496px;		
-	}
-
-
-	& * {
-		box-sizing: border-box;
-	}
+	}	
 
 	&__left, &__right {
 		background: #fff;		
@@ -33,12 +32,9 @@
 		}
 	}
 
-	&__right {
-		width: 100%;				
-		
-		@media (min-width: 1100px) {
-			width: 585px;			
-		}
+	&__right {						
+		width: 585px;
+		margin: 0 auto;				
 	}
 
 	&__title {
@@ -46,12 +42,13 @@
 		font-weight: bold;
 		color: #000000;
 		margin-bottom: 23px;
+		width: 100%;
 	}
 
 	&__block {
 		&__checkbox {
 			display: flex;
-			justify-content: flex-start;
+			justify-content: flex-start;			
 			margin-bottom: 25px;
 			&__wrapper {
 				&--2{
@@ -123,17 +120,24 @@
 	order: 2;
 
 	@media (min-width: 768px) {
-		width: 60%;
+		width: 50%;
 		order: 1;
+	}
+	@media (min-width: 960px) {
+		width: 60%;		
 	}
 }
 
 .calculator-razmer {
 	width: 100%;
 	order: 1;
+
 	@media (min-width: 768px) {
-		width: 40%;
+		width: 50%;
 		order: 2;
+	}
+	@media (min-width: 960px) {
+		width: 40%;		
 	}
 	&__block {
 		display: flex;
@@ -152,9 +156,71 @@
 }
 
 .design-slider {
-	&__item {
-		display: inline-block;
+	&__wrapper {
+		position: relative;
+		padding: 0 15px;
 	}
+
+	&__item {		
+		cursor: pointer;
+		text-align: center;		
+
+		&.active &__img {			
+			border: 1px solid #ffa500;			
+		}
+
+		&__img {
+			width: auto;
+			display: inline-block;
+			padding: 5px 10px;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	&__controll {
+		position: absolute;
+		top: 40%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 999;
+
+		&__prev, &__next {
+			position: absolute;
+			width: 23px;
+			height: 23px;
+			background-image: url('../img/arrow-slider.png');
+			background-repeat: no-repeat;
+		}
+
+		&__next {
+			right: 5px;
+
+			@media (max-width: 960px) {
+				right: 75px;	
+			}
+			@media (max-width: 580px) {
+				right: 15px;	
+			}
+		}
+
+		&__prev {
+			left: -15px;
+			transform: rotateZ(-180deg);
+
+			@media (max-width: 960px) {
+				left: 75px;	
+			}
+
+			@media (max-width: 580px) {
+				left: 15px;	
+			}
+			
+		}
+	}	
 }
 
 .calculator-raschet {
@@ -162,18 +228,30 @@
 		padding: 29px 0 36px;
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid #ffa500;
+		flex-wrap: wrap;
+
+		&--border {
+			border-top: 1px solid #ffa500;
+			border-bottom: 1px solid #ffa500;
+		}
 
 		@media (max-width: 580px) {
 			flex-direction: column;
 		}
-	}	
+	}
+	&__design &__title{
+		text-align: center;
+
+		@media (min-width: 1100px) {
+			text-align: left;
+		}
+	}
 }
 
 .calculator-complectation {
 	width: 100%;
 
-	@media (min-width: 1100px) {
+	@media (min-width: 768px) {
 		width: 50%;
 	}
 }
@@ -181,25 +259,45 @@
 .calculator-montazh {
 	width: 100%;
 
-	@media (min-width: 1100px) {
+	@media (min-width: 768px) {
 		width: 50%;
 	}
 }
 
 .calculator-design {
 	width: 100%;
-
-	@media (min-width: 1100px) {
+	
+	@media (min-width: 768px) {
 		width: 50%;
 	}
+
+	&__title {
+		margin-bottom: 15px;
+		text-align: center;
+
+		@media (min-width: 960px) {
+			text-align: left;
+		}
+	}
+
 }
 
 .calculator-color {
 	width: 100%;
 
-	@media (min-width: 1100px) {
+	@media (min-width: 768px) {
 		width: 50%;
 	}
+
+	&__title {
+		margin-bottom: 30px;
+		text-align: center;
+
+		@media (min-width: 960px) {
+			text-align: left;
+		}
+	}
+
 
 	&__list {
 		display: flex;
@@ -209,11 +307,56 @@
 
 	&__item {
 		margin: 0 8px 8px 0;
+		cursor: pointer;
+
+		&.active {
+			img {
+				border: 1px solid #ffa500;
+			}
+		}
 		
 		img {
-			border: 1px solid #cccccc;			
+			border: 1px solid #cccccc;
 			width: 65px;
 			height: 78px;
+			margin: 0 auto;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		padding: 0 15px;
+	}
+
+	&__controll {
+		display: block;
+
+		@media (min-width: 960px) {
+			display: none;
+		}
+
+		position: absolute;
+		top: 40%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 999;
+
+		&__prev, &__next {
+			position: absolute;
+			width: 23px;
+			height: 23px;
+			background-image: url('../img/arrow-slider.png');
+			background-repeat: no-repeat;
+		}
+
+		&__next {
+			right: -10px;
+		}
+
+		&__prev {
+			left: -10px;
+			transform: rotateZ(-180deg);
 		}
 	}
 }
@@ -251,6 +394,10 @@
 		border: none;
 	}
 
+	td {
+		padding-bottom: 10px;
+	}
+
 	table {
 		width: 100%;
 		font-size: 13px;
@@ -258,6 +405,14 @@
 
 	&__value {
 		font-weight: bold;		
+	}
+	&__name {
+		min-width: 75px;
+		display: inline-block;
+
+		@media (min-width: 960px) {
+			min-width: 100px;
+		}
 	}
 }
 
@@ -310,5 +465,8 @@
 		font-weight: 400;
 		line-height: 15px;
 	}
+}
 
+.calculator-print {
+	float: right;
 }

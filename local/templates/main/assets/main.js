@@ -10893,6 +10893,19 @@ return jQuery;
 
 /***/ }),
 
+/***/ "../node_modules/slick-carousel/slick/slick.scss":
+/*!*******************************************************!*\
+  !*** ../node_modules/slick-carousel/slick/slick.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./styles/fonts.scss":
 /*!***************************!*\
   !*** ./styles/fonts.scss ***!
@@ -14017,31 +14030,62 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_fonts_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/fonts.scss */ "./styles/fonts.scss");
 /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.scss */ "./styles/style.scss");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! slick-carousel */ "../node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_3__);
-var _this = undefined;
+/* harmony import */ var _node_modules_slick_carousel_slick_slick_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/slick-carousel/slick/slick.scss */ "../node_modules/slick-carousel/slick/slick.scss");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! slick-carousel */ "../node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
-window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_2___default());
+window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_3___default());
 
-jquery__WEBPACK_IMPORTED_MODULE_2___default()('[data-design-slider]').slick({
+var sw = screen.width;
+jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-design-slider]').slick({
   infinite: true,
   dots: false,
-  arrows: false,
+  arrows: true,
   slidesToShow: 4,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  nextArrow: jquery__WEBPACK_IMPORTED_MODULE_3___default()('.design-slider__controll__next'),
+  prevArrow: jquery__WEBPACK_IMPORTED_MODULE_3___default()('.design-slider__controll__prev'),
+  responsive: [{
+    breakpoint: 960,
+    settings: {
+      slidesToShow: 1,
+      centerMode: true
+    }
+  }]
 });
-jquery__WEBPACK_IMPORTED_MODULE_2___default()(document).on('click', '.design-slider__item', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.design-slider__item').removeClass('active');
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()(_this).addClass('active');
+
+function sliderColor() {
+  if (screen.width < 960) {
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-color-slider]').slick({
+      infinite: true,
+      dots: false,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: jquery__WEBPACK_IMPORTED_MODULE_3___default()('.calculator-color__controll__next'),
+      prevArrow: jquery__WEBPACK_IMPORTED_MODULE_3___default()('.calculator-color__controll__prev')
+    });
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()('[data-color-slider]').slick('unslick');
+  }
+}
+
+jquery__WEBPACK_IMPORTED_MODULE_3___default()(window).resize(function () {
+  sliderColor();
 });
-jquery__WEBPACK_IMPORTED_MODULE_2___default()(document).on('click', '.calculator-color__item', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.calculator-color__item').removeClass('active');
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()(_this).addClass('active');
+sliderColor();
+jquery__WEBPACK_IMPORTED_MODULE_3___default()('.design-slider__item').click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_3___default()('.design-slider__item').removeClass('active');
+  jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).addClass('active');
+});
+jquery__WEBPACK_IMPORTED_MODULE_3___default()('.calculator-color__item').click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_3___default()('.calculator-color__item').removeClass('active');
+  jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).addClass('active');
 });
 })();
 
